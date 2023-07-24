@@ -1,18 +1,37 @@
 package com.example.mvc_mvp_mvvm.Presenterclass
 
 import com.example.mvc_mvp_mvvm.IModelmvp.IModel
+import com.example.mvc_mvp_mvvm.ModelforMVP.Architecturemodelmvp
 import com.example.mvc_mvp_mvvm.presenterinterface.IPresenter
 import com.example.mvc_mvp_mvvm.viewinterfaces.IViewInterface
 
-class Presenter(var view:IViewInterface,var model:IModel):IPresenter{
-    override fun whicharchiterture(architecture: String) {
-        view.showViewArchitecture(architecture)
+
+class Presenter(ipresenter: IPresenter) {
+
+    private var ipresenter: IPresenter? = null
+    private var architecture: Architecturemodelmvp = Architecturemodelmvp()
+
+
+    init {
+        this.ipresenter=ipresenter
+    }
+//    fun showarchitecture(architecture: String?) {
+//
+//        if (architecture != null) {
+//            ipresenter?.whicharchiterture()
+//        }
+//
+//    }
+    fun getarchitecture(architectur: String) {
+        ipresenter?.whicharchiterture(architecture.getmodelarchitecture())
     }
 
-    override fun showpresenterarchtecture() {
 
-        this.model.showmodelarchitecture()
+
+    interface IPresenter {
+        fun whicharchiterture(architecture: String)
+//        fun showpresenterarchtecture()
+
     }
-
 
 }

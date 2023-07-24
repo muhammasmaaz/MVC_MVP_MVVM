@@ -3,17 +3,16 @@ package com.example.mvc_mvp_mvvm.ModelforMVP
 import com.example.mvc_mvp_mvvm.IModelmvp.IModel
 import com.example.mvc_mvp_mvvm.presenterinterface.IPresenter
 
-class Architecturemodelmvp :IModel {
-    lateinit var ipresenter: IPresenter
+class Architecturemodelmvp {
+    var architecture="MVP"
+    fun setmodelarchitecture(architecture:String) {
 
-    override fun showmodelarchitecture() {
+        this.architecture=architecture
 
-        val architecture="MVP"
-        this.sendarchitecture(architecture)
 
     }
-    fun sendarchitecture(architecturemvp:String)
-    {
-        ipresenter.whicharchiterture(architecturemvp)
+    fun getmodelarchitecture(): String {
+        return architecture
     }
+
 }
