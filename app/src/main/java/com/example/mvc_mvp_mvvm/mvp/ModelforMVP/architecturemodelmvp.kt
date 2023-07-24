@@ -1,9 +1,9 @@
-package com.example.mvc_mvp_mvvm.ModelforMVP
+package com.example.mvc_mvp_mvvm.mvp.ModelforMVP
 
-import com.example.mvc_mvp_mvvm.IModelmvp.IModel
-import com.example.mvc_mvp_mvvm.presenterinterface.IPresenter
+import com.example.mvc_mvp_mvvm.mvp.ModelforMVP.IModelmvp.IModel
+import com.example.mvc_mvp_mvvm.mvp.ModelforMVP.presenterinterface.IPresenter
 
-class Architecturemodelmvp :IModel {
+class Architecturemodelmvp : IModel {
     lateinit var ipresenter: IPresenter
 
     override fun showmodelarchitecture() {
